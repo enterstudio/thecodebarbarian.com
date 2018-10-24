@@ -6,7 +6,9 @@
   "scripts": {
     "deploy": "git subtree push --prefix bin . gh-pages && git push origin gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js && node server.js"
+    "start": "node index.js && node server.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -21,8 +23,8 @@
     "commander": "2.3.0",
     "feed": "0.2.6",
     "file": "0.2.2",
-    "forever": "0.13.0",
-    "gulp": "3.8.10",
+    "forever": "0.15.3",
+    "gulp": "4.0.0",
     "gulp-livereload": "3.8.0",
     "highlight.js": "9.1.0",
     "jade": "1.1.5",
@@ -30,7 +32,9 @@
     "moment": "2.4.0",
     "node-static": "0.7.3",
     "underscore": "1.5.2",
-    "wagner-core": "0.2.0"
+    "wagner-core": "0.2.0",
+    "snyk": "^1.104.2"
   },
-  "homepage": "https://github.com/vkarpov15/thecodebarbarian.com"
+  "homepage": "https://github.com/vkarpov15/thecodebarbarian.com",
+  "snyk": true
 }
